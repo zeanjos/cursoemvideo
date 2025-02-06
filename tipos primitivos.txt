@@ -1,0 +1,4 @@
+int = números inteiros: 1, 5 -10 e -5
+float = são números inteiros, com virgula, negativos
+bool = serve pra identificar valores booleanos, se é verdadeiro ou falso ou loops, true or false
+str = caracteres, tipo: "Olá!"

@@ -1,0 +1,5 @@
+nunca pode se usar um elif sem if. Sempre abrir elif com o else, exemplo:
+if carro.siga():
+
+elif
+	carro.pare():

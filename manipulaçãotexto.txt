@@ -1,0 +1,3 @@
+é assim que é usado algumas funções:
+split: print(frase.split()) 'Este cria a lista para cada item que tem espaço, exemplo: curso em vídeo será transformado em 'curso' 'em' 'video' '
+strip: print(frase.strip()) 'Este tira todos os espaços externos, como: '      José Gabriel  ' ou '     Jose'.
