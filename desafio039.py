@@ -15,7 +15,7 @@ elif idade > 18:
     else:
         print('Você já possui {} Anos de idade, o prazo de alistamento passou à {} Anos'.format(idade, passou))    
 elif idade < 18:
-    if falta ==1:
+    if falta == 1:
         print('Você ainda é menor de 18 anos de idade, deverá aguardar mais {} Ano para se alistar.'.format(falta))
     else:
         print('Você ainda é menor de 18 anos de idade, deverá aguardar mais {} Anos para se alistar.'.format(falta))
