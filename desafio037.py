@@ -5,13 +5,13 @@ while True:
 
 
         if escolha == 1:
-            print('O número {} Convertido para binário é: {}'.format(numero, bin(numero)))
+            print('O número {} Convertido para binário é: {}'.format(numero, bin(numero)[2:]))
             break
         elif escolha == 2:
-            print('O número{} Convertido para octal é: {}'.format(numero, oct(numero)))
+            print('O número{} Convertido para octal é: {}'.format(numero, oct(numero)[2:]))
             break
         elif escolha == 3:
-            print('O número {} Convertido para hexadecimal é {}'.format(numero, hex(numero)))
+            print('O número {} Convertido para hexadecimal é {}'.format(numero, hex(numero)[2:]))
             break
         else:
              print('Escolha incorreta! Tente novamente.')
