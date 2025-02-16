@@ -30,3 +30,4 @@ elif jok == 1:
 elif jok == 3:
     if aleatorio == 1:
         print('Eu escolhi tesoura e você pedra, você ganhou!')
+        
