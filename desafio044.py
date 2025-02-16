@@ -14,6 +14,10 @@ elif escolha == 4:
     print('Parcelando em 2x no cartão o valor sai o mesmo, sem acrescimo, sem descontos, em duas parcelas fica R${} .'.format(valorf))
 elif escolha == 5:
     parcelas = int(input('Digite a quantidade de parcelas: '))
-    tresx = (valor + (valor * 0.20)) / parcelas
-    print('O valor das parcelas será de R${:.2f} em {} Vezes.'.format(tresx, parcelas))
+    while parcelas < 3:
+        print('O valor digitado é menor que 3 parcelas, digite novamente.')
+        parcelas = int(input('Digite a quantidade de parcelas: '))
+    valorjuros = valor + (valor * 0.20)
+    valorjuroscorreto = valorjuros / parcelas
+    print('O valor das parcelas será de R${:.2f} em {} Vezes, o valor total com juros é de: R${:.2f}.'.format(valorjuroscorreto, parcelas, valorjuros))
     
