@@ -1,6 +1,5 @@
-i = int(input('Inicio: '))
-f = int(input('Fim: '))
-p = int(input('Passo: '))
-for c in range(i, f+1, p):
+from time import sleep
+for c in range(10, 0, -1):
     print(c)
-print('Fim!')
+    sleep(1)
+print('Fogos!')
