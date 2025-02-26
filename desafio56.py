@@ -3,7 +3,7 @@ contidad = 0    #usado para contar a idade e em seguida verificar a média lá e
 maior = None
 menor = None
 contfem = 0
-for c in range(1, 4):
+for c in range(1, 5):
     print('-=-'*20)
     nome = str(input('Digite o seu nome: ')).strip().title()
     idade = int(input('Digite a sua idade: '))
