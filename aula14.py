@@ -1,4 +1,4 @@
-c = 1
-while c < 10:
-    c = c + 1
-    print(c)
+c = None
+while c != 0:
+    c = int(input('Digite um número: '))
+print('Fim!')
