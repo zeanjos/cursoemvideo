@@ -4,7 +4,7 @@ cont = 1
 aleatorio = randint(1, 10)
 escolha = int(input('Digite um número de 1 a 10 e tente adivinhar: '))
 if escolha == aleatorio:
-    print(f'Você acertou de primeira.')
+    print('Você acertou de primeira.')
 else:
     print('Você errou, tente novamente.')
     cont += 1
