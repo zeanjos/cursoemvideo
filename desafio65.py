@@ -26,8 +26,11 @@ while desejo == 's':
             print('Você escolheu continuar, prossiga.') 
        
     if desejo == 'n':
+        print('-=-'*12)
         print(f'''A soma dos números digitados é {soma}
-A média dos números digitados é: {media}''')
+A média dos números digitados é: {media}
+O maior número digitado é {maior}, e o menor é {menor}''')
         print('Você escolheu sair, até mais!')
+        print('-=-'*12)
     
         
