@@ -8,7 +8,6 @@ while menu != 5:
     s = num + num2
     mult = num * num2
     
-    
     menu = int(input('''Digite um valor para realizar as operações matemáticas:\n
 [1] Somar\n
 [2] Multiplicar\n
@@ -19,6 +18,9 @@ Digite a opção desejada: '''))
     
     if menu == 1:
         print(f'Os números digitados somados dão resultado de: {s:.2f}')
+        desejo = str(input('Deseja continuar? [S/N]: ')).lower()  # noqa: F821
+    if desejo == 'n':  # noqa: F821
+        print('Você escolheu sair, tchau!')
     elif menu == 2:
         print(f'Os números digitados multiplicados dão resultado de: {mult:.2f}')
     elif menu == 3:
@@ -27,6 +29,9 @@ Digite a opção desejada: '''))
         if num2 > num:
             maior = num2
             print(f'O maior número digitado é: {maior}')
+        desejo = str(input('Deseja continuar? [S/N]: ')).lower()
+        if desejo == 'n':
+            print('Você escolheu sair, tchau!')
         if num == num2:
             print('Os valores são iguais, não existe maior.')
         desejo = str(input('Deseja continuar? [S/N]: ')).lower()
@@ -41,4 +46,6 @@ Digite a opção desejada: '''))
         print('-=-'*16)
         print('Opção 5 escolhida, até mais!')
         print('-=-'*16)
+    else:
+        print('Opção invalida!')
         
