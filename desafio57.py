@@ -1,4 +1,4 @@
-sexo = str(input('Digite o seu sexo [M/F]: ')).lower().strip()
+sexo = str(input('Digite o seu sexo [M/F]: ')).lower().strip()[0]
 
 while sexo != 'm' and sexo != 'f':
     print('Você digitou incorretamente, digite novamente!')
