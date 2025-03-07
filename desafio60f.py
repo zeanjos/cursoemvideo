@@ -8,8 +8,3 @@ while c > 0:
     f *= c
     c -= 1
 print(f)
-    #c -= 1
-#s = n * c
-#s *= c
-#print(f'{n} x {c} = {s}')##
-
