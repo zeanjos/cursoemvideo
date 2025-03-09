@@ -1,13 +1,18 @@
 
 p1 = int(input('Digite o primeiro termo: '))
 r = int(input('Digite a razão: '))
-while r <= 10:
-    for i in range(p1, 11, r):
-        print(f'Resultado: {i}\n')
-    desejo = int(input('Deseja continuar? [0] Não [1] Sim: '))
-    if desejo == 1:
-        p1 = int(input('Digite o primeiro termo: '))
-        r = int(input('Digite a razão: '))
-    elif desejo == 0:
-        print('Você escolheu sair, até mais!')
-        break
+s = p1
+total = 0
+mais = 10
+cont = 1
+while mais != 0:
+    total = total + mais
+    while cont <= total:
+            print(f'{s} --> ', end='')
+            s += r
+            cont += 1
+    print('PAUSA')
+    mais = int(input('Quantos termos você quer mostrar a mais: '))
+print(f'Progressão finalizada com {cont} termos exibidos.')
+    
+print('FIM')
