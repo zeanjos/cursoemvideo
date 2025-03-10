@@ -32,5 +32,4 @@ A média dos números digitados é: {media}
 O maior número digitado é {maior}, e o menor é {menor}''')
         print('Você escolheu sair, até mais!')
         print('-=-'*12)
-    
         
