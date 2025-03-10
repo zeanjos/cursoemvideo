@@ -1,10 +1,6 @@
-
-num = 0
-med = 0
 menor = None
 maior = None
-soma = 0
-media = 0
+soma = media = num = 0
 desejo = str('s').lower()
 cont = 0
 while desejo == 's':
@@ -22,7 +18,7 @@ while desejo == 's':
             menor = num 
                 
     if desejo == 's':
-            desejo = str(input('Deseja continuar [S] ou [N]: ')).lower()
+            desejo = input('Deseja continuar [S] ou [N]: ').lower().strip()[0]
             print('Você escolheu continuar, prossiga.') 
        
     if desejo == 'n':
