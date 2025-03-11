@@ -1,6 +1,6 @@
 cont = n = s = 0
 while n != 999:
-    n = int(input('Digite um número:'))
+    n = int(input('Digite um número, [999 Para parar]: '))
     if n == 999:
         break
     cont += 1
