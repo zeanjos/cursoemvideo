@@ -1,10 +1,7 @@
 valor = int(input('Digite o valor que quer sacar: '))
 cem = cinq = vin = dez = cin = um = 0
 while True:
-    if valor >= 100:
-        valor -= 100
-        cem += 1
-    elif valor >= 50:
+    if valor >= 50:
         valor -= 50
         cinq += 1
     elif valor >= 20:
@@ -21,8 +18,7 @@ while True:
         um += 1
     if valor == 0:
         break
-print(f'''Foram sacados {cem} Notas de cem\n
-{cinq} Notas de cinquenta\n
+print(f'''Foram sacados {cinq} Notas de cinquenta\n
 {vin} Notas de vinte\n
 {dez} Notas de dez\n
 {cin} Notas de cinco\n
