@@ -1,23 +1,32 @@
 precop = 0
 total = 0
-
+menor = float('inf')
+mil = 0
 while True:
     nomep = str(input('Nome do produto: ')).strip()
     precop = int(input('Preço R$: '))
     total += precop
-    menor = float('inf')
+    if precop > 1000:
+        mil += 1
     if menor > precop:
         menor = precop
-
+        nome_menor = nomep
     while True:
-        try:         
+        try:
+
             desejo = str(input('Deseja continuar? [S/N]: ')).strip().lower()
             if desejo not in ['s', 'n']:
-                raise ValueError('Você digitou incorretamente, digite novamente.')
-        except ValueError:
-            print('Você digitou errado, digite novamente.')
-            if desejo == 'n':
-                print(f'O total foi de: {total}, menor foi de {menor}')
+                raise ValueError('Você digitou incorretamente.')
+            elif desejo == 'n':
+                print('Até mais!')
                 break
             elif desejo == 's':
                 print('Você escolheu continuar!')
+                break
+        except ValueError:
+            print('Você digitou incorretamente, digite novamente.')
+    
+    if desejo == 'n':
+        break
+
+print(f'O total foi de: {total:.2f}, o produto mais barato foi o (a) {nome_menor} de valor {menor:.2f}, Quantidade de produtos acima de mil reais: {mil} ')
