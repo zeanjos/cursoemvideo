@@ -4,7 +4,13 @@ menor = float('inf')
 mil = 0
 while True:
     nomep = str(input('Nome do produto: ')).strip()
-    precop = int(input('Preço R$: '))
+    while True:    
+        try:
+            precop = float(input('Preço R$: '))
+            break
+        except ValueError:
+            print('Opção invalida. Digite novamente.')
+        
     total += precop
     if precop > 1000:
         mil += 1
@@ -14,7 +20,7 @@ while True:
     while True:
         try:
 
-            desejo = str(input('Deseja continuar? [S/N]: ')).strip().lower()
+            desejo = str(input('Deseja continuar? [S/N]: ')).strip().lower()[0]
             if desejo not in ['s', 'n']:
                 raise ValueError('Você digitou incorretamente.')
             elif desejo == 'n':
