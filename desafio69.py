@@ -10,7 +10,7 @@ while True:
         maior += 1
     while True:    
         try:
-            sexo = str(input('Digite seu sexo: [M/F] ')).strip().lower()
+            sexo = str(input('Digite seu sexo: [M/F] ')).strip().lower()[0]
             if sexo not in ['m', 'f']:
                 raise ValueError
             break
@@ -22,9 +22,10 @@ while True:
         contf += 1
     if sexo == 'f' and idade < 20:
         menorf += 1
-    desejo = str(input('Deseja continuar? [S/N]: '))
+    desejo = str(input('Deseja continuar? [S/N]: ')).strip().lower()[0]
     while desejo != 's' and desejo != 'n':
-        desejo = str(input('Deseja continuar? [S/N]: '))
+        print('Opção invalida, digite novamente.')
+        desejo = str(input('Deseja continuar? [S/N]: ')).strip().lower()[0]
     if desejo == 'n':
         print('Você escolheu sair!')
         break
@@ -33,4 +34,4 @@ while True:
 
 print(f'''{maior} Pessoas tem mais de 18 anos.\n
 foram cadastrados {contm} {'Homem' if contm == 1 else 'homens'}.\n
-{menorf} Mulheres tem menos de 20 Anos.''')
+{'Mulheres tem menos de 20 Anos.' if menorf >= 1 else ' ' }''')
