@@ -15,7 +15,8 @@ while True:
             cont_cinq += 1
             t_ced += 1
         else:
-            print(f'Total de cédulas {t_ced} de R$ {ced}')
+            if t_ced > 0:
+                print(f'Total de cédulas {t_ced} de R$ {ced}')
             if ced == 50:
                 ced = 20
             elif ced == 20:
@@ -27,5 +28,7 @@ while True:
             t_ced = 0
             if total == 0:
                 break
-            
+            desejo = str(input('Deseja continuar? '))
+            if desejo != 's' and desejo != 'n':
+                
         
