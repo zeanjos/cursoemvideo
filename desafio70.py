@@ -1,9 +1,10 @@
-precop = 0
-total = 0
+
+total = mil = precop = 0
 menor = float('inf')
-mil = 0
+
 while True:
     nomep = str(input('Nome do produto: ')).strip()
+    
     while True:    
         try:
             precop = float(input('Preço R$: '))
@@ -14,15 +15,18 @@ while True:
     total += precop
     if precop > 1000:
         mil += 1
+
     if menor > precop:
         menor = precop
         nome_menor = nomep
+
     while True:
         try:
 
             desejo = str(input('Deseja continuar? [S/N]: ')).strip().lower()[0]
             if desejo not in ['s', 'n']:
                 raise ValueError('Você digitou incorretamente.')
+
             elif desejo == 'n':
                 print('Até mais!')
                 break
