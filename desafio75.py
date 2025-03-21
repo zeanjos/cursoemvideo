@@ -10,8 +10,11 @@ while cont < 4:
         cont += 1
         valores += num_str + ', '
         cont_nove += num_str.count('9')
+        if '3' in valores:
+            cont_tres = valores.index('3')
     except ValueError:
         print('Digito invalido, digite novamente.')
+        
 
 
-print(f'Valores: {valores} Quantidade de vezes que o 9 apareceu: ', cont_nove)
+print(f'Valores: {valores} Quantidade de vezes que o 9 apareceu: ', cont_nove, f'O primeiro número três apareceu em indice: {cont_tres}')
