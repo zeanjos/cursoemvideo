@@ -2,7 +2,7 @@ cont = 0
 cont_nove = 0
 valores = str()
 primeiro_tres = 0
-qntd = 0
+qntd = par = 0
 while cont < 4:
         num = int(input('Digite um número: '))
         num_str = str(num)
@@ -20,8 +20,12 @@ while cont < 4:
                   primeiro_tres = num_f
                   ind_pri_tres = cont
         
-            
+        if num % 2 == 0:
+              par += 1
+              
         
 
 
-print(f'Valores: {valores} \nQuantidade de vezes que o 9 apareceu: ', cont_nove, f'\nO primeiro número três apareceu em indice:{ind_pri_tres}')
+print(f'Valores: {valores} \nQuantidade de vezes que o 9 apareceu: ', cont_nove, 
+f'\nO primeiro número três apareceu em indice:{ind_pri_tres}'
+f'Os valores pares digitados foi: {par}')
