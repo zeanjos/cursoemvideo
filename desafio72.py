@@ -12,6 +12,17 @@ lista2 = ('zero', 'um', 'dois', 'três', 'quatro',
 while True:
     num = int(input('Digite um número entre 0 e 20: '))
     if 0 <= num <= 20:
+        print(f'Você digitou o número: {lista1[num]} E por extenso fica "{lista2[num]}"')
+    else:
+        print('Você digitou errado.')
         break
-    print('Você digitou errado.')
-print(f'Você digitou o número{lista1[num]} E por extenso fica "{lista2[num]}"')
+
+    desejo = str(input('Deseja continuar [S/N]: ')).lower().strip()
+    if desejo == 'n':
+        print('Você escolheu sair, até mais!')
+        break
+    elif desejo == 's':
+        print('Você escolheu continuar!')
+    else:
+        print('Caracter invalido!')
+        
