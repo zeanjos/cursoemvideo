@@ -18,11 +18,12 @@ while True:
         break
 
     desejo = str(input('Deseja continuar [S/N]: ')).lower().strip()
-    if desejo == 'n':
+    if desejo == 's':
+        print('Você escolheu continuar!')
+        continue
+    elif desejo == 'n':
         print('Você escolheu sair, até mais!')
         break
-    elif desejo == 's':
-        print('Você escolheu continuar!')
     else:
         print('Caracter invalido!')
-        
+       

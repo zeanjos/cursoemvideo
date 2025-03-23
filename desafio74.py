@@ -11,7 +11,8 @@ while cont < 5:
     lista_vazia += (num_aleatorio, )
     if maior < num_aleatorio:
         maior = num_aleatorio
-    elif menor > num_aleatorio:
+    if menor > num_aleatorio:
         menor = num_aleatorio
-print('''Os valores sorteados foram:''', *lista_vazia, 
+
+print(f'''Os valores sorteados foram: {lista_vazia}''', 
 f'''\nO maior valor é {maior} e o menor é {menor}''')

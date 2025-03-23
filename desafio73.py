@@ -1,18 +1,17 @@
-jogadores = ('Botafogo', 'Palmeiras', 'Flamengo', 'Fortaleza', 'Internacional',
+times = ('Botafogo', 'Palmeiras', 'Flamengo', 'Fortaleza', 'Internacional',
              'São Paulo', 'Corinthians', 'Bahia', 'Cruzeiro', 'Vasco da Gama', 
              'EC Vitória', 'Atlético-MG', 'Fluminense', 'Grêmio', 'Juventude', 
              'Bragantino', 'Athletico-PR', 'Chapecoense', 'Atlético-GO', 'Cuiabá'
 )
-ultimos4 = jogadores[-4:]
-nome = sorted(jogadores)
 
-
-
-print('Os cinco primeiros colocados são: ', jogadores[0: 5])
-print('='*40)
-print(f'Os últimos quatro colocados da tabela são: {ultimos4}')
-print('='*40)
-print(f'O nome dos Times em ordem alfabética: {nome}')
-print('='*40)
-print(f'Chapecoense está em {jogadores.index('Chapecoense')+ 1}º Na tabela de colocados.')
-print('='*40)
+ultimos_times = times[-4:]
+primeiros_cinco = times[0: 5]
+print('-='*20)
+print(f'Os cinco primeiros times da tabela do Brasileirão são: {', '.join(primeiros_cinco)}.')
+print('-='*20)
+print(f'Os quatro últimos times da tabela do Brasileirão são: {', '.join(ultimos_times)}.')
+print('-=')
+print(f'Os times em ordem alfabética:\n {', '.join(sorted(times))}')
+print('-='*20)
+print(f'O time da chapecoense está na posição {times.index('Chapecoense') + 1}º.')
+print('-='*20)
