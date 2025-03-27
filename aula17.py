@@ -1,8 +1,4 @@
-num = []
-cont = 0
-while cont < 3:
-    num.append(int(input('Digite um número: ')))
-    cont += 1
-
-for c, v in enumerate(num):
-    print(f'Na posição {c}, encontrei o valor {v}')
+a = [1, 5, 7, 9, 3]
+b = [10, 24, 5, 8, 1]
+b = a[:]
+print(b)
