@@ -11,7 +11,7 @@ for c, v in enumerate(num):
         indice = c
         if menor == num[c]:
             lista_menor.append(v)
-            indice_menor.append(c,)
+            indice_menor.append(c)
     if maior < num[c]:
         maior = num[c]
         indice_maior = c
