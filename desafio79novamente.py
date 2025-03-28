@@ -10,3 +10,4 @@ while cont < 5:
         if menor > v:
             menor = v
         print(f'O menor valor da lista até agora: {menor} no indice: {i}')
+        #tá quase!
