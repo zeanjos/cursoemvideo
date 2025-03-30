@@ -1,13 +1,28 @@
 from math import inf
 menor = inf
 num = []
-cont = 0
-while cont < 5:
-    cont += 1
-    num.append(int(input('Digite um número: ')))
-    for i, v in enumerate(num[:5]):
-    
+continua = True
+parar_loop = 0
+indice_menor = indice_maior = -1
+
+
+while continua:
+    numero = int(input('Digite um número, digite 0 se desejar parar: '))
+    maior = numero
+    if numero in num:
+        print('Este número já existe na lista, não será adicionado.')
+        num.pop()
+
+    if numero == parar_loop:
+        continua = False
+    else:
+        num.append(numero)
+    for i, v in enumerate(num[0:]):
         if menor > v:
             menor = v
-        print(f'O menor valor da lista até agora: {menor} no indice: {i}')
-        #tá quase!
+            indice_menor = i
+        if maior < v:
+            maior = v
+            indice_maior = i
+
+print(f'O menor valor da lista: {menor} no indice: {indice_menor}, O maior número da lista: {maior} no indice: {indice_maior}')
