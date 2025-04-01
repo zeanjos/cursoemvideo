@@ -11,6 +11,5 @@ for i in range(0, 5):
             temp = numeros[j]
             numeros[j] = numeros[i]
             numeros[i] = temp
-for i in range(0, 5):
-    print(f'Número {numeros[i]} adicionado no indice {i}')
-print(f'Números ordenados {numeros}')
+            print(f'Número {numeros[i]} adicionado no indice {i}')
+print(f'Números ordenados {numeros}') # só falta agora o indice em tempo real
