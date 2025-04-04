@@ -11,4 +11,5 @@ while continua:
         numeros.pop()
         continua = False
 numeros.sort()
+
 print(f'Os números da lista em ordem crescente são: {numeros}')
