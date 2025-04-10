@@ -11,5 +11,8 @@ for sub_lista in lista_numeros:
         pares.append(sub_lista[0])
     else:
         impares.append(sub_lista[0])
+impares.sort()
+pares.sort()
 lista_numeros = [pares, impares]
-print(f'Números pares {lista_numeros[0]}\n' if len(pares)  > 0 else 'Não foi digitado numeros pares' + '\n', f'Lista impares {lista_numeros[1]}' if len(impares) > 0 else 'Não foi digitado numeros impares.')
+
+print(f'Números pares {lista_numeros[0]}\n' if len(pares)  > 0 else 'Não foi digitado numeros pares\n', f'Lista impares {lista_numeros[1]}' if len(impares) > 0 else 'Não foi digitado numeros impares.')
