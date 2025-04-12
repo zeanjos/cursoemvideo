@@ -10,8 +10,9 @@ for p in range(palpites):
         numero = randint(0, 60)
         jogo.append(numero)
     matriz.append(jogo)
-    
+
 for indice, jogo in enumerate(matriz, start=1):
+    jogo.sort()
     print(f'Jogo: {indice}: {jogo}')
 
 
