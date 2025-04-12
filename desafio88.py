@@ -1,8 +1,10 @@
 from random import randint
+from time import sleep
 matriz = []
 
 palpites = int(input('Quantos jogos você quer que eu sorteie? '))
-print(f'Sorteando {palpites} Jogos')
+print(f'\nSorteando {palpites} Jogos!')
+print('-'*30)
 
 for p in range(palpites):
     jogo = []
@@ -14,5 +16,6 @@ for p in range(palpites):
 for indice, jogo in enumerate(matriz, start=1):
     jogo.sort()
     print(f'Jogo: {indice}: {jogo}')
-
+    sleep(1)
+print('-'*10, 'Boa sorte!', '-'*10)
 
