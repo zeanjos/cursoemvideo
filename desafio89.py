@@ -21,9 +21,9 @@ while continua:
             print('Voce escolheu parar!')
             continua = False
 print('-'*30)
-print('Nº  Nome        Média')
+print(f'Nº - Nome {'media':>15}')
 dados_formatados = [[aluno[0], f'{aluno[1]:.2f}']for aluno in dados]
 for i, enumerados in enumerate(dados_formatados):
-    print(f'{i} - {" |      ".join(enumerados)}')
+    print(f'{i:02} - {(f"{item:<15}" for item in enumerados)}')
 
     
