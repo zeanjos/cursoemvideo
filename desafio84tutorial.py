@@ -18,11 +18,13 @@ while continua:
     else:
         if dados [1] < menor:
             menor = dados [1]
-
+    
         if dados [1] > maior:
+            nome_maior.clear()
             maior = dados[1]
+            nome_maior.append(dados[0])
         dados.clear()
-
+    
     desejo = str(input('Deseja continuar [S/N]? '))
     if desejo == 's':
         print('Você escolheu continuar.')
@@ -32,9 +34,6 @@ while continua:
         continua = False
 
 print('-'*30)
-for p in lista:
-    if p[1] == maior:
-        nome_maior = p[0]
 print(f'O maior peso foi de {nome_maior} com {maior}kgs')
 for p in lista:
     if p[1] == menor:
