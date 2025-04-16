@@ -1,7 +1,9 @@
 lista = []
 dados = []
-menor = []
-maior = []
+menor = 0
+maior = 0
+nome_menor = []
+nome_maior = []
 continua = True
 contador = 0
 while continua:
@@ -11,14 +13,15 @@ while continua:
     dados.append(float(input(f'Digite o peso da {contador}ª Pessoa: ')))
     lista.append(dados[:])
     
-    if contador == 1:
-        menor = dados[1]
-        maior = dados[1]
-    if dados [1] < menor:
-        menor = dados [1]
-    if dados [1] > maior:
-        maior = dados [1]
-    dados.clear()
+    if len(lista) == 1:
+        menor = maior = dados[1]
+    else:
+        if dados [1] < menor:
+            menor = dados [1]
+
+        if dados [1] > maior:
+            maior = dados[1]
+        dados.clear()
 
     desejo = str(input('Deseja continuar [S/N]? '))
     if desejo == 's':
@@ -29,5 +32,12 @@ while continua:
         continua = False
 
 print('-'*30)
-print(f'\nOs dados foram: {lista} e menor também: {menor}\nAo todo você cadastrou {len(lista)} Pessoas.\n')
+for p in lista:
+    if p[1] == maior:
+        nome_maior = p[0]
+print(f'O maior peso foi de {nome_maior} com {maior}kgs')
+for p in lista:
+    if p[1] == menor:
+        nome_menor = p[0]
+print(f'\nO menor peso foi de: {nome_menor} com {menor} Kgs\n\nAo todo você cadastrou {len(lista)} Pessoas.\n')
 print('-'*30)
