@@ -5,7 +5,7 @@ jogos = []
 
 print('-'*30)
 palpite = int(input('Quantos jogos você quer que eu sorteie? '))
-total = 0
+total = 1
 while total <= palpite:
     contador = 0
     while True:
@@ -18,4 +18,8 @@ while total <= palpite:
     lista.sort()
     jogos.append(lista[:])
     lista.clear()
-    print(f'Os números sorteados foram: {jogos}')
+    total +=1
+print(f'Sorteando {palpite} Jogos!')
+for i, lista in enumerate(jogos):
+    print(f'Jogo {i+1:<2}: {str(lista):^20}')
+    sleep(1)
