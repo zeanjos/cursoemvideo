@@ -3,9 +3,9 @@ contador = 0
 continua = True
 while continua:
     contador += 1
-    nome = str(input(f'Digite o nome do {contador} Aluno: ')).strip().capitalize()
-    nota = float(input(f'Digite a primeira nota do aluno {nome}: '))
-    segunda_nota = float(input(f'Digite a segunda nota do aluno {nome}: '))
+    nome = str(input(f'Nome do {contador}º Aluno: ')).strip().capitalize()
+    nota = float(input(f'Nota 1 do aluno {nome}: '))
+    segunda_nota = float(input(f'Nota 2 do aluno {nome}: '))
     media = (nota + segunda_nota) / 2
     aluno = [nome, nota, segunda_nota, media]
     dados.append(aluno)
@@ -26,6 +26,7 @@ for i, enumerados in enumerate(dados_formatados):
     print(f'{i:<4} - {enumerados[0]:<10} {'|':^3} {enumerados[1]:>6}')
 print('-'*30)
 desejo = int(input('Deseja visualizar as notas de qual aluno? [999] para parar: '))
-if desejo in i:
-    print(f'As notas do aluno {dados[desejo]} são: {dados[desejo+1]}')
+for i, enumerados in enumerate(dados_formatados):
+    if i in dados_formatados:
+        print(f'As notas do aluno {dados[desejo]} são: {dados[desejo+1]}')
     
