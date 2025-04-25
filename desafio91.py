@@ -7,3 +7,4 @@ for c in range(1,5):
 
 for jogador, valor in lista.items():
     print(f'O jogador {jogador} tirou {valor}')
+    
